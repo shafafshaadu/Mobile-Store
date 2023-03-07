@@ -1,0 +1,23 @@
+{%extends 'home.html'%}
+{%block home%}
+<body style="background-color: red;">
+<h3 class="bg-warning">PRODUCTS</h3>
+<a href="{% url 'usprvi' %}" button class="btn btn-primary">Products</button></a>
+<form action=""  method="post" enctype="multipart/form-data" class="text-center">
+   {%csrf_token%}
+ 
+  <table class="text-light bg-dark" style="align-items: center;">
+
+<h3 style="font-style: oblique;color: crimson;">please fill the table to order the product</h3>
+    {{form.as_p}}
+
+    <h3 style="font-style: italic;color: black;">Click here to order the product</h3><button class="btn btn-success">Order</button>
+   </table>
+  </form>
+   
+ 
+
+
+</body>
+
+  {% endblock home %}

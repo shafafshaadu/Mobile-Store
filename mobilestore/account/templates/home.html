@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body style="background-color: rgb(218, 236, 125)">
+   
+    {%csrf_token%}
+   <center>
+    <img src="data:image/jpeg;base64,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">
+    <br>
+    <h style="font-size: xx-large;font-style: italic;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;align-items: center;">Apple Store</h>
+   </center>
+    <nav class="navbar navbar-expand-sm bg-dark">
+      <ul class="navbar-nav">
+          <li class="nav-item"><a href="{% url 'reg' %}" class="nav-link btn btn-outline-warning">SIGN IN</a></li>
+          <li class="nav-item"><a href="{% url 'home' %}" class="nav-link btn btn-outline-success">HOME</a></li>
+          <li class="nav-item"><a href="{% url 'log' %}" class="nav-link btn btn-outline-primary">LOGin</a></li>
+          <li class="nav-item"><a href="{% url 'out' %}" class="nav-link btn btn-outline-danger">LOG OUT</a></li>         
+      </ul>
+     
+  </nav>
+  {% block home %}
+  <ul style="align-items: right;color: rgb(72, 49, 19);">
+  <li>Iphone 14</li> <li>Apple macbook pro</li>
+  <li>Iphone 13</li> <li>I pad</li>
+  <li>Iphone 12</li>
+  <li>Iphone 11</li>
+  <li>Apple Mac</li>
+  </ul>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+  
+
+  <img src="https://images.news18.com/ibnlive/uploads/2022/09/apple-iphone-14-pro-launch-2022-16625743583x2.jpg?im=FitAndFill,width=1200,height=1200" style="background-repeat: no-repeat;background-size: cover;background-size:100%;">
+
+
+  {% endblock home %}
+  
+</html>

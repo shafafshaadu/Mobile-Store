@@ -1,0 +1,35 @@
+{%extends 'home.html'%}
+{%block home%}
+<body style="background-color: gainsboro;">
+<h3 class="bg-warning">PRODUCTS</h3>
+<a href="{% url 'myod' %}" button class="btn btn-primary">My cart</button></a>
+<br>
+<br>
+<br>
+<form action=""  method="post" enctype="multipart/form-data" class="text-center">
+    <br>
+    <br>
+    {%csrf_token%}   
+    {%for i in data%}
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{i.pic.url}}" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">NAME: {{i.productname}}</h4>
+          <h4 class="card-title">PRICE: {{i.price}}</h4>
+          <p class="card-text">quantity: {{i.quantity}}</p>
+          <p class="card-text">model: {{i.productmodel}}</p>
+          <p class="card-text">{{i.color}}</p>
+          <p class="card-text">{{i.description}}</p>    
+        </div>
+        <a href="{% url 'order' %}" class="btn btn-success">ORDER</a>
+        <br>
+        <a href="{% url 'myod' %}" class="btn btn-warning">ADD TO CART</a>
+    </div>
+    
+  {%endfor%} 
+</form>
+</body>
+
+  {% endblock home %}
+
+ 

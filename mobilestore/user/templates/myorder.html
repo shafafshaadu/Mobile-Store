@@ -1,0 +1,45 @@
+{%extends 'home.html'%}
+{%block home%}
+<body style="background-color: gainsboro;">
+<h3 class="bg-warning">PRODUCTS</h3>
+<a href="{% url 'usprvi' %}" button class="btn btn-primary">Products</button></a>
+<br>
+<br>
+<form action=""  method="post" enctype="multipart/form-data" class="text-center">
+    {%csrf_token%}   
+    <!-- {%for i in data%}
+    <div class="card" style="width:400px">
+        <img class="card-img-top" src="{{i.pic.url}}" alt="Card image">
+        <div class="card-body">
+          <h4 class="card-title">NAME: {{i.productname}}</h4>
+          <h4 class="card-title">PRICE: {{i.price}}</h4>
+          <p class="card-text">quantity: {{i.quantity}}</p>
+          <p class="card-text">model: {{i.productmodel}}</p>
+          <p class="card-text">{{i.color}}</p>
+          <p class="card-text">{{i.description}}</p>    
+        </div>
+        <a href="{% url 'order' %}" class="btn btn-success">ORDER</a>
+        <br>
+        <a href="{% url 'prodel' i.id %}" class="btn btn-success">ADD TO CART</a>
+    </div>
+    
+  {%endfor%}  -->
+  <div class="col-8">
+          
+    {%for i in data%}
+    <div class="card mt-3 bg-light">
+      {%if i.image%}
+      <img src="{{i.image.url}}" alt="blog-image">
+      {%endif%}
+      <div class="card-body">
+        <p class="text-end">posted by:{{i.product_name}}{{i.price}}</p>
+        <h1 class="card-title">{{i.productmodel}}</h1>
+        <div class="card-content">
+          {{i.color}}
+        </div>
+        <p>{{i.pic}}</p>
+      </div>
+</form>
+</body>
+
+  {% endblock home %}
